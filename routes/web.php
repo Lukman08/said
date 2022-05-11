@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/datauser', [App\Http\Controllers\DataUserController::class, 'datauser'])->name('datauser');
+
+Route::get('/tambahuser', [App\Http\Controllers\DataUserController::class, 'tambahuser'])->name('tambahuser');
+Route::post('/insertuser', [App\Http\Controllers\DataUserController::class, 'insertuser'])->name('insertuser');
+
+Route::get('/deleteuser/{id}', [App\Http\Controllers\DataUserController::class, 'deleteuser'])->name('deleteuser');
