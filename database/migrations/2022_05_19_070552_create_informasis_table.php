@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //TAMBAHKAN KOLOM ROLE DENGAN TIPE ENUM DAN MEMILIKI BEBERAPA PILIHAN ROLE
-            $table->enum('role',  ['user', 'manager', 'admin'])->after('password');
+        Schema::create('informasis', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul');
+            $table->string('gambar')->nullable();
+            $table->text('isi');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role');
-        });
+        Schema::dropIfExists('informasis');
     }
 };

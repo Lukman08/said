@@ -13,10 +13,10 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Data Users</h4>
+                                <h4>Informasi</h4>
                             </div>
                             <div class="card-body">
-                                <a class="btn btn-outline-success" href="/tambahuser" role="button"><svg
+                                <a class="btn btn-outline-success" href="/tambahinformasi" role="button"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-plus-circle" viewBox="0 0 16 16">
                                         <path
@@ -28,26 +28,33 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Nama</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Role</th>
+                                            <th scope="col">Judul</th>
+                                            <th scope="col">gambar</th>
+                                            <th scope="col">isi</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
-                                    @php
-                                        $nom = 1;
-                                    @endphp
-                                    @foreach ($data as $row)
-                                        <tr>
-                                            <th scope="row">{{ $nom++ }}</th>
-                                            <td>{{ $row->name }}</td>
-                                            <td>{{ $row->email }}</td>
-                                            <td>{{ $row->role }}</td>
-                                            <td> <a href="/deleteuser/{{ $row->id }}"
-                                                    class="btn btn-danger">Hapus</a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                    <tbody>
+                                        @php
+                                            $nom = 1;
+                                        @endphp
+                                        @foreach ($data as $row)
+                                            <tr>
+                                                <th scope="row">{{ $nom++ }}</th>
+                                                <td>{{ $row->judul }}</td>
+                                                <td>
+                                                    <img src="{{ asset('gambarinformasi/' . $row->gambar) }}" alt=""
+                                                        style="width:100px">
+                                                </td>
+                                                <td>{{ $row->isi }}</td>
+                                                <td>
+                                                    <a href="/tampilinformasi/{{ $row->id }}"
+                                                        class="btn btn-info">Edit</a>
+                                                    <a href="/deleteinformasi/{{ $row->id }}"
+                                                        class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

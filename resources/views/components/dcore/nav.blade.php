@@ -154,18 +154,12 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Hello, {{ Auth::user()->name }}</div>
-                <a href="#" class="dropdown-item has-icon">
+                {{-- <a href="#" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
-                </a>
-                <a href="#" class="dropdown-item has-icon">
-                    <i class="fas fa-bolt"></i> Activities
-                </a>
-                <a href="#" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Settings
-                </a>
+                </a> --}}
                 <div class="dropdown-divider"></div>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                      document.getElementById('logout-form').submit();"
+                                                        document.getElementById('logout-form').submit();"
                     class="dropdown-item has-icon text-danger">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>

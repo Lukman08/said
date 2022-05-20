@@ -21,6 +21,17 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/style.css">
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/css/components.css">
+
+    {{-- Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+        }
+
+    </style>
 </head>
 
 <body>

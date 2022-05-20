@@ -21,10 +21,16 @@
 
             </li>
             <li class="dropdown">
-                <a href="#" class="nav-link"><i class="fas fa-map-marker-alt"></i> <span>Informasi</span></a>
+                <a href="/informasi" class="nav-link"><i class="fas fa-map-marker-alt"></i>
+                    <span>Informasi</span></a>
 
             </li>
+
             <li class="dropdown">
+                <a href="#" class="nav-link "><i class="fas fa-plug"></i> <span>Aspirasi</span></a>
+
+            </li>
+            {{-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>Modules</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="#">Calendar</a>
@@ -34,13 +40,13 @@
                     <li><a class="nav-link" href="#">DataTables</a></li>
                     <li><a class="nav-link" href="#">Flag</a></li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
 
-        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+        {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
             <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split">
                 <i class="fas fa-rocket"></i> Documentation
             </a>
-        </div>
+        </div> --}}
     </aside>
 </div>

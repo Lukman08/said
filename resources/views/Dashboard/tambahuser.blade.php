@@ -35,7 +35,7 @@
                                                 <input type="password" name="password" class="form-control" bcrypt
                                                     id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
-                                            <div class="mb-3">
+                                            {{-- <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Role</label>
                                                 <select class="form-select form-select-sm" name="role"
                                                     aria-label="form-select-sm example">
@@ -43,7 +43,7 @@
                                                     <option value="1">manager</option>
                                                     <option value="2">user</option>
                                                 </select>
-                                            </div>
+                                            </div> --}}
                                             <button type="submit" class="btn btn-outline-primary">Submit</button>
                                         </form>
                                     </div>
