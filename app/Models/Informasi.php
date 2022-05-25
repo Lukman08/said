@@ -13,4 +13,8 @@ class Informasi extends Model
         'isi',
     ];
     use HasFactory;
+
+    public function scopePublish(){
+        return $query -> where ('status', "publish");
+    }
 }

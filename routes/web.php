@@ -24,17 +24,24 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/datauser', [App\Http\Controllers\DataUserController::class, 'datauser'])->name('datauser');
+Route::group(['middleware' => 'can:isAdmin'], function($id = null){
+    Route::get('/datauser', [DataUserController::class, 'datauser'])->name('datauser');
 
-Route::get('/tambahuser', [App\Http\Controllers\DataUserController::class, 'tambahuser'])->name('tambahuser');
-Route::post('/insertuser', [App\Http\Controllers\DataUserController::class, 'insertuser'])->name('insertuser');
+    Route::get('/tambahuser', [DataUserController::class, 'tambahuser'])->name('tambahuser');
+    Route::post('/insertuser', [DataUserController::class, 'insertuser'])->name('insertuser');
+    
+    Route::get('/deleteuser/{id}', [DataUserController::class, 'deleteuser'])->name('deleteuser');
+    
+    Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi');
+    Route::get('/tambahinformasi', [InformasiController::class, 'tambahinformasi'])->name('tambahinformasi');
+    Route::post('/insertinformasi', [InformasiController::class, 'insertinformasi'])->name('insertinformasi');
+    // Route::get('/tampilinformasi/{id}', [InformasiController::class, 'tampilinformasi'])->name('insertinformasi');
+    Route::get('/deleteinformasi/{id}', [InformasiController::class, 'deleteinformasi'])->name('deleteinformasi');
+    
+});
 
-Route::get('/deleteuser/{id}', [App\Http\Controllers\DataUserController::class, 'deleteuser'])->name('deleteuser');
-
-Route::get('/informasi', [App\Http\Controllers\InformasiController::class, 'informasi'])->name('informasi');
-Route::get('/tambahinformasi', [App\Http\Controllers\InformasiController::class, 'tambahinformasi'])->name('tambahinformasi');
-Route::post('/insertinformasi', [App\Http\Controllers\InformasiController::class, 'insertinformasi'])->name('insertinformasi');
-Route::get('/tampilinformasi/{id}', [App\Http\Controllers\InformasiController::class, 'tampilinformasi'])->name('insertinformasi');
-Route::get('/deleteinformasi/{id}', [App\Http\Controllers\InformasiController::class, 'deleteinformasi'])->name('deleteinformasi');
+Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($id = null){
+    Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi_user');
+});
