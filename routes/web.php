@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\InformasiController;
 
@@ -40,8 +41,11 @@ Route::group(['middleware' => 'can:isAdmin'], function($id = null){
     // Route::get('/tampilinformasi/{id}', [InformasiController::class, 'tampilinformasi'])->name('insertinformasi');
     Route::get('/deleteinformasi/{id}', [InformasiController::class, 'deleteinformasi'])->name('deleteinformasi');
     
+    Route::get('/aspirasi', [AspirasiController::class, 'aspirasi'])->name('aspirasi');
 });
 
 Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($id = null){
     Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi_user');
+    
+    Route::post('/insertaspirasi', [AspirasiController::class, 'insertaspirasi'])->name('insertaspirasi');
 });

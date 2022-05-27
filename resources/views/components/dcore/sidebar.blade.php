@@ -37,7 +37,8 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="nav-link "><i class="fas fa-plug"></i> <span>Aspirasi</span></a>
+                    <a href="{{ route('aspirasi') }}" class="nav-link "><i class="fas fa-plug"></i>
+                        <span>Aspirasi</span></a>
 
                 </li>
             @endcan
@@ -79,7 +80,8 @@
 
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link "><i class="fas fa-plug"></i> <span>Aspirasi</span></a>
+                                <a href="{{ route('insertaspirasi') }}" class="nav-link "><i
+                                        class="fas fa-plug"></i> <span>Aspirasi</span></a>
 
                             </li>
                         @endcan

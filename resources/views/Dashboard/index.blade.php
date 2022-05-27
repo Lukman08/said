@@ -29,13 +29,14 @@
                                                     <img src="{{ asset('dashboard/user.png') }}" class="card-img-top"
                                                         alt="...">
                                                     <div class="card-title">
-                                                        <h4>Jumlah</h4>
+                                                        <h4>{{ $datauser }}</h4>
                                                     </div>
                                                     Data User
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="#" class="card-link">Lihat selengkapnya.</a>
+                                                    <a href="{{ route('datauser') }}" class="card-link">Lihat
+                                                        selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -45,8 +46,8 @@
                                                 {{-- <img src="gambar1.jpg" class="card-img-top" alt="..."> --}}
 
                                                 <div class="card-body">
-                                                    <img src="{{ asset('dashboard/user.png') }}" class="card-img-top"
-                                                        alt="...">
+                                                    <img src="{{ asset('dashboard/pengajuan.png') }}"
+                                                        class="card-img-top" alt="...">
                                                     <div class="card-title">
                                                         <h4>Jumlah</h4>
                                                     </div>
@@ -64,8 +65,8 @@
                                                 {{-- <img src="gambar1.jpg" class="card-img-top" alt="..."> --}}
 
                                                 <div class="card-body">
-                                                    <img src="{{ asset('dashboard/user.png') }}" class="card-img-top"
-                                                        alt="...">
+                                                    <img src="{{ asset('dashboard/pengajuan.png') }}"
+                                                        class="card-img-top" alt="...">
                                                     <div class="card-title">
                                                         <h4>Jumlah</h4>
                                                     </div>
@@ -83,16 +84,17 @@
                                                 {{-- <img src="gambar1.jpg" class="card-img-top" alt="..."> --}}
 
                                                 <div class="card-body">
-                                                    <img src="{{ asset('dashboard/user.png') }}" class="card-img-top"
-                                                        alt="...">
+                                                    <img src="{{ asset('dashboard/informasi.png') }}"
+                                                        class="card-img-top" alt="...">
                                                     <div class="card-title">
-                                                        <h4>Jumlah</h4>
+                                                        <h4>{{ $informasi }}</h4>
                                                     </div>
                                                     Informasi
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="#" class="card-link">Lihat selengkapnya.</a>
+                                                    <a href="{{ route('informasi') }}" class="card-link">Lihat
+                                                        selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,10 +104,10 @@
                                                 {{-- <img src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?size=338&ext=jpg&ga=GA1.2.351400492.1650332179" class="card-img-top" alt="..."> --}}
 
                                                 <div class="card-body">
-                                                    <img src="{{ asset('dashboard/user.png') }}" class="card-img-top"
-                                                        alt="...">
+                                                    <img src="{{ asset('dashboard/aspirasi.png') }}"
+                                                        class="card-img-top" alt="...">
                                                     <div class="card-title">
-                                                        <h4>Jumlah</h4>
+                                                        <h4>{{ $aspirasi }}</h4>
                                                     </div>
                                                     Aspirasi
                                                 </div>
