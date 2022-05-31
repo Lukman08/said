@@ -47,5 +47,6 @@ Route::group(['middleware' => 'can:isAdmin'], function($id = null){
 Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($id = null){
     Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi_user');
     
+    Route::get('/kirimaspirasi', [AspirasiController::class, 'kirimaspirasi'])->name('kirimaspirasi');
     Route::post('/insertaspirasi', [AspirasiController::class, 'insertaspirasi'])->name('insertaspirasi');
 });

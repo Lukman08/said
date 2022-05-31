@@ -12,11 +12,16 @@ class AspirasiController extends Controller
         return view('Dashboard/aspirasi', compact('data'));
     }
 
+    public function kirimaspirasi() {
+        return view('User/tambahaspirasi');
+    }
+
     public function insertaspirasi(Request $request)
     {
-        Aspirasi::create(['name'=>$request->name,
+        Aspirasi::create([
+        'name'=>$request->name,
         'aspirasi'=>$request->aspirasi
     ]);
-        return redirect()->route('insertaspirasi');
+        return redirect()->back();
     }
 }

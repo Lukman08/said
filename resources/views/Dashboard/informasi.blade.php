@@ -109,7 +109,8 @@
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <h5 class="card-title">{{ $row->judul }}</h5>
-                                                                <p class="card-text">{{ $row->isi }}</p>
+                                                                <p class="card-text">{!! Str::limit($row->isi, 250) !!}
+                                                                </p>
                                                                 <a href="" class="btn btn-primary">
                                                                     Selengkapnya.
                                                                 </a>
@@ -121,9 +122,9 @@
                                                 </div>
                                     @endforeach
                                     <!-- empty -->
-                                    <h3 class="text-center">
+                                    <h5 class="text-center">
                                         No data
-                                    </h3>
+                                    </h5>
                                     <!-- Post list:end -->
                                 </div>
                             </div>

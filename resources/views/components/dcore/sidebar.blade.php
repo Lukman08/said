@@ -80,7 +80,7 @@
 
                             </li>
                             <li class="dropdown">
-                                <a href="{{ route('insertaspirasi') }}" class="nav-link "><i
+                                <a href="{{ route('kirimaspirasi') }}" class="nav-link "><i
                                         class="fas fa-plug"></i> <span>Aspirasi</span></a>
 
                             </li>
