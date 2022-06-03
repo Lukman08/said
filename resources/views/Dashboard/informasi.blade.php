@@ -30,8 +30,8 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Judul</th>
-                                                <th scope="col">gambar</th>
-                                                <th scope="col">isi</th>
+                                                <th scope="col">Gambar</th>
+                                                <th scope="col">Isi</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
@@ -42,12 +42,13 @@
                                             @foreach ($data as $row)
                                                 <tr>
                                                     <th scope="row">{{ $nom++ }}</th>
-                                                    <td>{{ $row->judul }}</td>
+                                                    <td class="card-text">{!! Str::limit($row->judul, 25) !!}</td>
+
                                                     <td>
                                                         <img src="{{ asset('gambarinformasi/' . $row->gambar) }}" alt=""
                                                             style="width:100px">
                                                     </td>
-                                                    <td>{{ $row->isi }}</td>
+                                                    <td class="card-text">{!! Str::limit($row->isi, 35) !!}</td>
                                                     <td>
                                                         <a href="/tampilinformasi/{{ $row->id }}"
                                                             class="btn btn-info">Edit</a>
