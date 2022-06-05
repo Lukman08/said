@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\sktm;
 use App\Models\User;
 use App\Models\Aspirasi;
 use App\Models\Informasi;
@@ -30,6 +31,7 @@ class HomeController extends Controller
         $datauser = User::count();
         $informasi = Informasi::count();
         $aspirasi = Aspirasi::count();
-        return view('Dashboard/index', compact('datauser', 'informasi', 'aspirasi'));
+        $sktm = sktm::count();
+        return view('Dashboard/index', compact('datauser', 'informasi', 'aspirasi', 'sktm'));
     }
 }

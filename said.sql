@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Apr 2022 pada 16.20
+-- Waktu pembuatan: 05 Jun 2022 pada 15.26
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -24,6 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `aspirasis`
+--
+
+CREATE TABLE `aspirasis` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `aspirasi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `failed_jobs`
 --
 
@@ -36,6 +50,30 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `informasis`
+--
+
+CREATE TABLE `informasis` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `isi` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `informasis`
+--
+
+INSERT INTO `informasis` (`id`, `judul`, `gambar`, `isi`, `created_at`, `updated_at`) VALUES
+(6, 'Rapat Kerja Karang Taruna', 'WhatsApp-Image-2021-11-28-at-21.49.08-678x381.jpeg', '<div>Sabtu, 27 November 2021 Bertempat di Pesanggarahan Timbanuh Karang Taruna “Maju Bersama” Desa Kumbang melaksanakan Rapat Kerja perdana setelah beberapa minggu lalu dilantik oleh Kepala Desa Kumbang. Rapat kerja tersebut dihadiri dan dibuka secara langsung oleh Kepala Desa Kumbang. Hadir dalam pembukaan Sekretaris Desa Kumbang, Pembina Karang Taruna Maju Bersama Desa Kumbang dan utusan Karang Taruna Kabupaten Lombok Timur.<br><br></div><div>Rapat Kerja ini bertujuan untuk merumuskan dan mengesahkan program kerja yang akan dilaksanakan oleh Karang Taruna Maju Bersama di tahun 2022. Ketua Karang Taruna Maju Bersama Desa Kumbang, Izan Sani dalam sambutannya menyampaikan bahwa struktural dalam Karang Taruna itu hanya tulisan di atas kertas. Sejatinya esensi dari berorganisasi itu yakni kerja-kerja kita bersama, bagaimana kita berkolaborasi untuk memajukan Desa Kumbang kita bersama.<br><br></div><div>Sementara itu Kepala Desa Kumbang, M. Taufik menaruh harapan besar pada Karang Taruna sebagai bagian dari Pioneer-Pioneer kemajuan Desa Kumbang, Karena kualitas pemuda memegang peranan penting bagi kemajuan suatu desa” ungkap beliau. selanjutnya Sekretaris Desa menyampaikan materi terkait dengan kiat-kiat desa sehingga mampu menjadi terbaik ke 5 Nasional dalam hal keterbukaan Informasi Publik dan mengembangkan website desa serta media lainnya.</div>', '2022-05-19 21:08:17', '2022-05-19 21:08:17'),
+(7, 'Musyawarah Kelompok Tani dan Penyuluhan Pertanian', 'IMG_20160406_205746-768x576.jpg', '<div>Rabu, 6 Maret 2016 bertempat di Sasana Krida Kusuma (nama: Balai Desa Plesungan) tepatnya pada pukul 19.30 WIB telah diadakan musyawarah kelompok tani dan penyuluhan pertanian oleh penyuluh lapangan kec. Kapas. Sebelum penyuluhan disampaikan terlebih dahulu membahas tentang bantuan traktor yang dibantukan kepada Bumdes-bersama desa Plesungan. Dengan hasil, Bumdes akan bekerja sama dengan kelompok tani untuk pengelolaannya dengan bagi hasil 20% hasil bersih disampaikan kepaa Bumdes.<br><br>Kemudian acara dilanjutkan dengan penyuluhan dari PL kecamatan dan Bapak Ruslan mengenai masalah para petani dalam hal hasil panen yang menurun karena banyak hama potong leher dan beluk. Dari penyuluh memberikan solusi agar penanaman menggunakan teknik jajar legowo. Dengan penyuluhan tersebut berharap hasil pertanian di desa Plesungan khususnya akan meningkat pada musim tanam yang akan datang.</div>', '2022-05-19 21:22:36', '2022-05-19 21:22:36'),
+(12, 'RAPAT KERJA PEMBINAAN PENYELENGGARAAN PEMERINTAHAN DESA', 'rapat-kerja-pembinaan-pemerintahan-desa.jpg', '<div><em>Bengkayang</em>, 5/2/2018. Bupati Bengkayang (SURYADMAN GIDOT, M.Pd) serta didampingi Wakil Bupati (AGUSTINUS NAON, S.Sos), Membuka rapat kerja pembinaan penyelenggaraan Pemerintah Desa Ta 2018, dihadiri Pj. Seketaris Daerah Kabupaten Bengkayang, Kepala SKPD, Ketua PKK, dan para undangan lainnya, Senin, 5/2/2018, Di Aula Satu Atap Lv. Rapat tersebut mengangkat tema, Evaluai Pertanggungjawaban Program kegiatan TA, 2017 serta sinkronisasi program kegiatan pemerintah Desa TA 2018.</div><div>Dalam Sambutannya Bupati Bengkayang (SURYADMAN GIDOT, M.Pd) menyampaikan agar pemerintah Desa dapat memahami peran, tugas dan fungsinya dalam pengelolaan Pemerintahan Desa dan pengelolan keuangan Desa DD/ADD.</div>', '2022-06-02 18:35:29', '2022-06-02 18:35:29');
 
 -- --------------------------------------------------------
 
@@ -58,7 +96,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2022_04_15_154127_add_role_column_to_users_table', 1);
+(5, '2022_04_15_154127_add_role_column_to_users_table', 1),
+(6, '2022_05_19_070552_create_informasis_table', 1),
+(7, '2022_05_26_230723_create_aspirasis_table', 1),
+(8, '2022_06_04_072233_create_sktms_table', 1),
+(9, '2022_06_04_223630_create_slipgajis_table', 1);
 
 -- --------------------------------------------------------
 
@@ -93,6 +135,53 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `sktms`
+--
+
+CREATE TABLE `sktms` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tempatlahir` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tanggallahir` date NOT NULL,
+  `agama` enum('Islam','Kristen','Khatolik','Hindu','Buddha','Konghucu') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jeniskelamin` enum('Laki Laki','Perempuan') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pekerjaan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_ortu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tempatlahir_ortu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tanggallahir_ortu` date NOT NULL,
+  `pekerjaan_ortu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alamat_ortu` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `filesktm` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `slipgajis`
+--
+
+CREATE TABLE `slipgajis` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tempatlahir` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tanggallahir` date NOT NULL,
+  `jeniskelamin` enum('Laki Laki','Perempuan') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('Belum Kawin','Kawin','Cerai Hidup','Cerai Mati') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pekerjaan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alamat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fileslipgaji` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `users`
 --
 
@@ -113,13 +202,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Lukman Hakim', 'lukman@gmail.com', NULL, '$2y$10$ZfP6njt8OT0OIstr2mMkY.z45FOT7xWq6Ldh8HBNlrN8RvnUM3gHC', 'admin', NULL, '2022-04-15 09:38:36', '2022-04-15 09:38:36'),
-(2, 'pemerintah', 'pemerintah@gmail.com', NULL, '$2y$10$bh5xAvKmkvi8uD5GQrEX8.X/utVcKNO5oeFftFBVrP8UcG8VbhtmK', 'manager', NULL, '2022-04-15 09:38:36', '2022-04-15 09:38:36'),
-(3, 'masyarakat', 'masyarakat@gmail.com', NULL, '$2y$10$f8.qxkFwG.B2qwkGEvKneeoj220gPcomopE.UZKE5XXL/eZ.kKRIC', 'user', NULL, '2022-04-15 09:38:36', '2022-04-15 09:38:36');
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$szyuXc5e/EBMC6Gm7v0Ryevs43L3kvJrwLJtgSb9Ur/neice.W8uS', 'admin', NULL, '2022-05-18 23:34:41', '2022-05-18 23:34:41'),
+(2, 'masyarakat', 'masyarakat@gmail.com', NULL, '$2y$10$m34Nd.zYtkaT.5Kh4/pNl..HA/kKac6Wp2RWUp3OFWz1KEz8WKMDa', 'user', NULL, '2022-05-18 23:34:41', '2022-05-18 23:34:41');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `aspirasis`
+--
+ALTER TABLE `aspirasis`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `failed_jobs`
@@ -127,6 +221,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indeks untuk tabel `informasis`
+--
+ALTER TABLE `informasis`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `migrations`
@@ -149,6 +249,18 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indeks untuk tabel `sktms`
+--
+ALTER TABLE `sktms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `slipgajis`
+--
+ALTER TABLE `slipgajis`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
@@ -160,16 +272,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `aspirasis`
+--
+ALTER TABLE `aspirasis`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `informasis`
+--
+ALTER TABLE `informasis`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -178,10 +302,22 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `sktms`
+--
+ALTER TABLE `sktms`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `slipgajis`
+--
+ALTER TABLE `slipgajis`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

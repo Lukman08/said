@@ -49,7 +49,7 @@
                                                     <img src="{{ asset('dashboard/pengajuan.png') }}"
                                                         class="card-img-top" alt="...">
                                                     <div class="card-title">
-                                                        <h4>Jumlah</h4>
+                                                        <h4>{{ $sktm }}</h4>
                                                     </div>
                                                     Pengajuan SKTM
                                                 </div>
@@ -68,7 +68,7 @@
                                                     <img src="{{ asset('dashboard/pengajuan.png') }}"
                                                         class="card-img-top" alt="...">
                                                     <div class="card-title">
-                                                        <h4>Jumlah</h4>
+                                                        <h4>{{ $sktm }}</h4>
                                                     </div>
                                                     Pengajuan Keterangan Slip Gaji
                                                 </div>

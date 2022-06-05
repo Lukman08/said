@@ -24,9 +24,9 @@
                     <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
                         <span>Pengajuan Surat</span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="nav-link" href="#">SKTM</a>
+                        <li><a class="nav-link" href="{{ route('sktm') }}">SKTM</a>
                         </li>
-                        <li><a class="nav-link" href="#">Slip Gaji</a>
+                        <li><a class="nav-link" href="{{ route('slipgaji') }}">Slip Gaji</a>
                         </li>
                     </ul>
                 </li>
@@ -66,9 +66,9 @@
                                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i>
                                     <span>Pengajuan Surat</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="#">SKTM</a>
+                                    <li><a class="nav-link" href="{{ route('pengajuansktm') }}">SKTM</a>
                                     </li>
-                                    <li><a class="nav-link" href="#">Slip Gaji</a>
+                                    <li><a class="nav-link" href="{{ route('pengajuanslipgaji') }}">Slip Gaji</a>
                                     </li>
                                 </ul>
                             </li>

@@ -41,11 +41,4 @@ class InformasiController extends Controller
         return redirect()->route('informasi')->with('success', 'berhasil dihapus');
     }
 
-    // public function deleteinformasi($id) {
-    //     $data = Informasi::find($id)->update([
-    //    'status' => 'on'
-    // 
-    // ]);
-    //     return redirect()->route('informasi')->with('success', 'berhasil dihapus');
-    // }
 }

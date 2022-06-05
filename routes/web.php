@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SktmController;
 use App\Http\Controllers\AspirasiController;
 use App\Http\Controllers\DataUserController;
+use App\Http\Controllers\SlipgajiController;
 use App\Http\Controllers\InformasiController;
 
 /*
@@ -42,6 +44,16 @@ Route::group(['middleware' => 'can:isAdmin'], function($id = null){
     Route::get('/deleteinformasi/{id}', [InformasiController::class, 'deleteinformasi'])->name('deleteinformasi');
     
     Route::get('/aspirasi', [AspirasiController::class, 'aspirasi'])->name('aspirasi');
+
+    Route::get('/sktm', [SktmController::class, 'pengajuansktm'])->name('sktm');
+    Route::get('/detailsktm/{id}', [SktmController::class, 'detailsktm'])->name('detailsktm', $id);
+    Route::post('/uploadsktm/{id}', [SktmController::class, 'uploadsktm'])->name('uploadsktm', $id);
+    Route::get('/accsktm/{id}', [SktmController::class, 'accsktm'])->name('accsktm', $id);
+
+    Route::get('/slipgaji', [SlipgajiController::class, 'pengajuanslipgaji'])->name('slipgaji');
+    Route::get('/detailslipgaji/{id}', [SlipgajiController::class, 'detailslipgaji'])->name('detailslipgaji', $id);
+    Route::post('/uploadslipgaji/{id}', [SlipgajiController::class, 'uploadslipgaji'])->name('uploadslipgaji', $id);
+    Route::get('/accslipgaji/{id}', [SlipgajiController::class, 'accslipgaji'])->name('accslipgaji', $id);
 });
 
 Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($id = null){
@@ -49,4 +61,14 @@ Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($i
     
     Route::get('/kirimaspirasi', [AspirasiController::class, 'kirimaspirasi'])->name('kirimaspirasi');
     Route::post('/insertaspirasi', [AspirasiController::class, 'insertaspirasi'])->name('insertaspirasi');
+
+    Route::get('/pengajuansktm', [SktmController::class, 'pengajuansktm'])->name('pengajuansktm');
+    Route::get('/tambahsktm', [SktmController::class, 'tambahsktm'])->name('tambahsktm');
+    Route::post('/insertsktm', [SktmController::class, 'insertsktm'])->name('insertsktm');
+    Route::get('/downloadsktm/{id}', [SktmController::class, 'downloadsktm'])->name('downloadsktm', $id);
+
+    Route::get('/pengajuanslipgaji', [SlipgajiController::class, 'pengajuanslipgaji'])->name('pengajuanslipgaji');
+    Route::get('/tambahslipgaji', [SlipgajiController::class, 'tambahslipgaji'])->name('tambahslipgaji');
+    Route::post('/insertslipgaji', [SlipgajiController::class, 'insertslipgaji'])->name('insertslipgaji');
+    Route::get('/downloadslipgaji/{id}', [SlipgajiController::class, 'downloadslipgaji'])->name('downloadslipgaji', $id);
 });
