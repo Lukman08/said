@@ -41,7 +41,7 @@ class SktmController extends Controller
         'alamat_ortu'=>$request->alamat_ortu,
         'keterangan'=> 0,
     ]);
-        return redirect()->back();
+        return redirect()->route('pengajuansktm')->with('success', 'Pengajuan SKTM berhasil dikirim.');
     }
 
     public function detailsktm($id){
@@ -61,14 +61,14 @@ class SktmController extends Controller
             'filesktm' => $namafile
         ]);
         
-        return redirect()->route('sktm');
+        return redirect()->route('sktm')->with('upload', 'File SKTM berhasil diupload.');
     }
 
     public function accsktm($id){
         $data = sktm::find($id)->update([
             'keterangan' => 1
         ]);
-        return redirect()->route('sktm');
+        return redirect()->route('sktm')->with('acc', 'Pengajuan SKTM berhasil diacc.');
     }
 
     public function downloadsktm($id){

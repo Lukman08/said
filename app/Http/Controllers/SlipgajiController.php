@@ -33,7 +33,7 @@ class SlipgajiController extends Controller
         'alamat'=>$request->alamat,
         'keterangan'=> 0,
     ]);
-        return redirect()->route('pengajuanslipgaji');
+        return redirect()->route('pengajuanslipgaji')->with('success', 'Pengajuan Slip Gaji berhasil dikirim.');
     }
 
     public function detailslipgaji($id){
@@ -53,14 +53,14 @@ class SlipgajiController extends Controller
             'fileslipgaji' => $namafile
         ]);
         
-        return redirect()->route('slipgaji');
+        return redirect()->route('slipgaji')->with('upload', 'File Slip Gaji berhasil diupload.');
     }
 
     public function accslipgaji($id){
         $data = slipgaji::find($id)->update([
             'keterangan' => 1
         ]);
-        return redirect()->route('slipgaji');
+        return redirect()->route('slipgaji')->with('acc', 'Pengajuan Slip Gaji berhasil diacc.');
     }
 
     public function downloadslipgaji($id){

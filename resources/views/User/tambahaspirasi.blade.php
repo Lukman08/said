@@ -14,22 +14,29 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Tulis Aspirasimu</h4>
+                                    <h4>Tulis aspirasi anda.</h4>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7">
                                         <div class="card-body">
+
+                                            @if (session('success'))
+                                                <div class="alert alert-success mt-4">
+                                                    {{ session('success') }}
+                                                </div>
+                                            @endif
+
                                             <form action="{{ route('insertaspirasi') }}" method="post"
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">name</label>
+                                                    <label for="exampleInputEmail1" class="form-label">Nama</label>
                                                     <input type="text" name="name" class="form-control"
                                                         id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 </div>
 
                                                 <div class="mb-3">
-                                                    <label for="exampleInputEmail1" class="form-label">isi</label>
+                                                    <label for="exampleInputEmail1" class="form-label">Aspirasi</label>
                                                     <input type="text" name="aspirasi" class="form-control"
                                                         id="exampleInputEmail1" aria-describedby="emailHelp">
                                                 </div>

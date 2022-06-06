@@ -25,6 +25,7 @@
                                             <path
                                                 d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                         </svg> Tambah</a>
+
                                     <table class="table mt-4">
                                         <thead>
                                             <tr>
@@ -102,6 +103,17 @@
                                     <h4>Pengajuan Slip Gaji</h4>
                                 </div>
                                 <div class="card-body">
+
+                                    @if (session('upload'))
+                                        <div class="alert alert-success mt-4">
+                                            {{ session('upload') }}
+                                        </div>
+                                    @elseif (session('acc'))
+                                        <div class="alert alert-success mt-4">
+                                            {{ session('acc') }}
+                                        </div>
+                                    @endif
+
                                     <table class="table mt-4">
                                         <thead>
                                             <tr>

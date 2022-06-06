@@ -25,6 +25,21 @@
                                             <path
                                                 d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                         </svg> Tambah</a>
+
+                                    @if (session('success'))
+                                        <div class="alert alert-success mt-4">
+                                            {{ session('success') }}
+                                        </div>
+                                    @elseif (session('update'))
+                                        <div class="alert alert-info mt-4">
+                                            {{ session('update') }}
+                                        </div>
+                                    @elseif (session('delete'))
+                                        <div class="alert alert-danger mt-4">
+                                            {{ session('delete') }}
+                                        </div>
+                                    @endif
+
                                     <table class="table mt-4">
                                         <thead>
                                             <tr>
@@ -50,11 +65,20 @@
                                                     </td>
                                                     <td class="card-text">{!! Str::limit($row->isi, 35) !!}</td>
                                                     <td>
-                                                        <a href="/tampilinformasi/{{ $row->id }}"
-                                                            class="btn btn-info">Edit</a>
-                                                        <a href="/deleteinformasi/{{ $row->id }}"
-                                                            class="btn btn-danger">Hapus</a>
+                                                        <div class="btn-group dropleft">
+                                                            <button type="button" class="btn btn-primary dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false">
+                                                                Menu
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item"
+                                                                    href="{{ route('editinformasi', $row->id) }}">Edit</a>
+                                                                <a class="dropdown-item"
+                                                                    href="{{ route('deleteinformasi', $row->id) }}">Hapus</a>
+                                                            </div>
+                                                        </div>
                                                     </td>
+
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -112,7 +136,8 @@
                                                                 <h5 class="card-title">{{ $row->judul }}</h5>
                                                                 <p class="card-text">{!! Str::limit($row->isi, 250) !!}
                                                                 </p>
-                                                                <a href="" class="btn btn-primary">
+                                                                <a href="{{ route('detailinformasi', $row->id) }}"
+                                                                    class="btn btn-primary">
                                                                     Selengkapnya.
                                                                 </a>
                                                                 <p class="card-text">Diubah pada :

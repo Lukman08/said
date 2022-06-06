@@ -35,8 +35,8 @@
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="{{ route('datauser') }}" class="card-link">Lihat
-                                                        selengkapnya.</a>
+                                                    <a href="{{ route('datauser') }}"
+                                                        class="card-link">Selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -55,7 +55,7 @@
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="#" class="card-link">Lihat selengkapnya.</a>
+                                                    <a href="{{ route('sktm') }}" class="card-link">Selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,13 +68,14 @@
                                                     <img src="{{ asset('dashboard/pengajuan.png') }}"
                                                         class="card-img-top" alt="...">
                                                     <div class="card-title">
-                                                        <h4>{{ $sktm }}</h4>
+                                                        <h4>{{ $slipgaji }}</h4>
                                                     </div>
                                                     Pengajuan Keterangan Slip Gaji
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="#" class="card-link">Lihat selengkapnya.</a>
+                                                    <a href="{{ route('slipgaji') }}"
+                                                        class="card-link">Selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,8 +94,8 @@
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="{{ route('informasi') }}" class="card-link">Lihat
-                                                        selengkapnya.</a>
+                                                    <a href="{{ route('informasi') }}"
+                                                        class="card-link">Selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,7 +114,8 @@
                                                 </div>
 
                                                 <div class="card-footer">
-                                                    <a href="#" class="card-link">Lihat selengkapnya.</a>
+                                                    <a href="{{ route('aspirasi') }}"
+                                                        class="card-link">Selengkapnya.</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -40,8 +40,9 @@ Route::group(['middleware' => 'can:isAdmin'], function($id = null){
     Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi');
     Route::get('/tambahinformasi', [InformasiController::class, 'tambahinformasi'])->name('tambahinformasi');
     Route::post('/insertinformasi', [InformasiController::class, 'insertinformasi'])->name('insertinformasi');
-    // Route::get('/tampilinformasi/{id}', [InformasiController::class, 'tampilinformasi'])->name('insertinformasi');
-    Route::get('/deleteinformasi/{id}', [InformasiController::class, 'deleteinformasi'])->name('deleteinformasi');
+    Route::get('/editinformasi/{id}', [InformasiController::class, 'editinformasi'])->name('editinformasi', $id);
+    Route::post('/updateinformasi/{id}', [InformasiController::class, 'updateinformasi'])->name('updateinformasi', $id);
+    Route::get('/deleteinformasi/{id}', [InformasiController::class, 'deleteinformasi'])->name('deleteinformasi', $id);
     
     Route::get('/aspirasi', [AspirasiController::class, 'aspirasi'])->name('aspirasi');
 
@@ -58,6 +59,7 @@ Route::group(['middleware' => 'can:isAdmin'], function($id = null){
 
 Route::group(['prefix'=>'masyarakat', 'middleware' => 'can:isUser'], function($id = null){
     Route::get('/informasi', [InformasiController::class, 'informasi'])->name('informasi_user');
+    Route::get('/detailinformasi/{id}', [InformasiController::class, 'detailinformasi'])->name('detailinformasi', $id);
     
     Route::get('/kirimaspirasi', [AspirasiController::class, 'kirimaspirasi'])->name('kirimaspirasi');
     Route::post('/insertaspirasi', [AspirasiController::class, 'insertaspirasi'])->name('insertaspirasi');

@@ -45,6 +45,7 @@
                                                 <label for="exampleInputEmail1" class="form-label">Jenis
                                                     Kelamin</label>
                                                 <select class="form-control" name="jeniskelamin">
+                                                    <option disabled selected value>Pilih jenis kelamin3</option>
                                                     <option>Laki Laki</option>
                                                     <option>Perempuan</option>
                                                 </select>
@@ -54,6 +55,7 @@
                                                 <label for="exampleInputEmail1" class="form-label">Status
                                                     Perkawinan</label>
                                                 <select class="form-control" name="status">
+                                                    <option disabled selected value>Pilih status perkawinan</option>
                                                     <option>Belum Kawin</option>
                                                     <option>Kawin</option>
                                                     <option>Cerai Hidup</option>

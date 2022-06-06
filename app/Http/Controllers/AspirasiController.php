@@ -22,6 +22,6 @@ class AspirasiController extends Controller
         'name'=>$request->name,
         'aspirasi'=>$request->aspirasi
     ]);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Anda berhasil mengirim aspirasi.');
     }
 }
