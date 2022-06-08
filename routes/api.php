@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['prefix' => 'v1'], function (){
+    Route::get('/informasi', [ApiController::class, 'index']);
+    Route::post('/pengajuan/sktm', [ApiController::class, 'pengajuan_sktm']);
+    Route::post('/pengajuan/slip', [ApiController::class, 'pengajuan_slip']);
+    Route::post('/aspirasi', [ApiController::class, 'aspirasi']);
 });
