@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AspirasiController extends Controller
 {
     public function aspirasi() {
-        $data = Aspirasi::all();
+        $data = Aspirasi::orderBy('id', 'DESC')->simplePaginate(5);
         return view('Dashboard/aspirasi', compact('data'));
     }
 

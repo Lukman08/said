@@ -25,18 +25,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @php
-                                            $nom = 1;
-                                        @endphp
-                                        @foreach ($data as $row)
+                                        @foreach ($data as $index => $row)
                                             <tr>
-                                                <th scope="row">{{ $nom++ }}</th>
+                                                <th scope="row">{{ $index + $data->firstItem() }}</th>
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->aspirasi }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{ $data->links() }}
                             </div>
                         </div>
                     </div>

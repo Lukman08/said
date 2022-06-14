@@ -16,16 +16,14 @@
                                 <div class="card-header">
                                     <h4>Tulis aspirasi anda.</h4>
                                 </div>
+                                @if (session('success'))
+                                    <div class="alert alert-success mt-4">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7">
                                         <div class="card-body">
-
-                                            @if (session('success'))
-                                                <div class="alert alert-success mt-4">
-                                                    {{ session('success') }}
-                                                </div>
-                                            @endif
-
                                             <form action="{{ route('insertaspirasi') }}" method="post"
                                                 enctype="multipart/form-data">
                                                 @csrf

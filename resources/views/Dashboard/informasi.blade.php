@@ -40,7 +40,7 @@
                                         </div>
                                     @endif
 
-                                    <table class="table mt-4">
+                                    <table class="table mt-2">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
@@ -51,12 +51,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @php
-                                                $nom = 1;
-                                            @endphp
-                                            @foreach ($data as $row)
+                                            @foreach ($data as $index => $row)
                                                 <tr>
-                                                    <th scope="row">{{ $nom++ }}</th>
+                                                    <th scope="row">{{ $index + $data->firstItem() }}</th>
                                                     <td class="card-text">{!! Str::limit($row->judul, 25) !!}</td>
 
                                                     <td>
@@ -83,6 +80,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                    {{ $data->links() }}
                                 </div>
                             </div>
                         </div>
@@ -125,7 +123,7 @@
                                                 <div class="card mb-4">
                                                     <div class="card-body">
                                                         <div class="row">
-                                                            <div class="col-lg-6">
+                                                            <div class="col-lg-5">
                                                                 <!-- thumbnail:start -->
                                                                 <!-- true -->
                                                                 <img class="card-img-top"
@@ -148,9 +146,7 @@
                                                 </div>
                                     @endforeach
                                     <!-- empty -->
-                                    <h5 class="text-center">
-                                        No data
-                                    </h5>
+                                    {{ $data->links() }}
                                     <!-- Post list:end -->
                                 </div>
                             </div>

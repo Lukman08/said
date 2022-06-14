@@ -18,7 +18,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
                                     <div class="card-body">
-                                        <form action="/insertuser" method="post" enctype="multipart/form-data">
+                                        <form action="{{ route('insertuser') }}" method="post"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">nama</label>

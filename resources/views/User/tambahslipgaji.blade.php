@@ -45,7 +45,7 @@
                                                 <label for="exampleInputEmail1" class="form-label">Jenis
                                                     Kelamin</label>
                                                 <select class="form-control" name="jeniskelamin">
-                                                    <option disabled selected value>Pilih jenis kelamin3</option>
+                                                    <option disabled selected value>Pilih jenis kelamin</option>
                                                     <option>Laki Laki</option>
                                                     <option>Perempuan</option>
                                                 </select>

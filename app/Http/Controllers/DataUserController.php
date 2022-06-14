@@ -37,8 +37,7 @@ class DataUserController extends Controller
     {
         User::create(['name'=>$request->name,
         'email'=>$request->email,
-        'password'=>$request->password,
-        'role'=>$request->role
+        'password'=>$request->password
     ]);
         return redirect()->route('datauser');
     }
