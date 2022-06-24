@@ -121,7 +121,7 @@
                                                 <th scope="col">Nama</th>
                                                 <th scope="col">Jenis Kelamin</th>
                                                 <th scope="col">Alamat</th>
-                                                <th scope="col">Orang Tua</th>
+                                                <th scope="col">Status</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
@@ -135,7 +135,6 @@
                                                     <td>{{ $row->name }}</td>
                                                     <td>{{ $row->jeniskelamin }}</td>
                                                     <td>{{ $row->alamat }}</td>
-                                                    <td>{{ $row->name_ortu }}</td>
                                                     <td>
                                                         @if ($row->keterangan == 0)
                                                             <span class="badge badge-danger">Belum di acc</span>
